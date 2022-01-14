@@ -1,42 +1,96 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ORMSTA BOLLKLUBB</title>
     <script
       src="https://kit.fontawesome.com/4b39a549d2.js"
       crossorigin="anonymous"
     ></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <div>
         <img class="logo" src="förstaloggan.png" />
-        Ormsta Bollklubb
+        ORMSTA BOLLKLUBB
       </div>
+
       <nav>
         <ul>
-          <li><a href="">Matcher&Resultat</a></li>
-          <li><a href="">Trupp</a></li>
-          <li><a href="">Biljetter</a></li>
-          <li><a href="">Info om klubben</a></li>
-          <li><a href="">kontakter</a></li>
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i></a>
+          </li>
+          <li><a href="m&r.html">Matcher&Resultat</a></li>
+          <li><a href="trupp.html">Trupp</a></li>
+          <li><a href="biljetter.html">Biljetter</a></li>
+          <li><a href="kontakt.html">Kontakter</a></li>
         </ul>
       </nav>
+      <div class="container">
+        <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Ormstas historia</button>
+         <div id="demo" class="collapse"> 
+          Ormsta bollklubb som grundades i Vallentuna var först av alla
+          korpenlagen och startade den stora trenden. 
+          Laget grundades 2019 och spelade sin premiärmatch mot Stockholmslaget
+          Värtan boys de visade för första gången 
+          att de är de starkaste laget.
+        
+      </div>
     </header>
-
-    <div id="slider">
-      <figure>
-        <img src="lagbild1.png" alt="" />
-        <img src="startelva.png" alt="" />
-        <img src="lagbild2.png" alt="" />
-        <img src="" alt="" />
-        <img src="lagbild1.png" alt="" />
-      </figure>
-    </div>
-
+    <main>
+  
+        
+      </div>
+      <div class="imagenav">
+        <div class="slider">
+          <div class="dots">
+            <i class="fas fa-arrow-left-white"></i>
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+            <label for="img4"></label>
+            <label for="img5"></label>
+            <label for="img6"></label>
+            <i class="fas fa-arrow-right-white"></i>
+          </div>
+          <div class="images">
+            <input type="radio" name="slide" id="img1" checked />
+            <input type="radio" name="slide" id="img2" />
+            <input type="radio" name="slide" id="img3" />
+            <input type="radio" name="slide" id="img4" />
+            <input type="radio" name="slide" id="img5" />
+            <input type="radio" name="slide" id="img6" />
+            <img src="lagbild ska användas.png" class="m1" alt="img1" />
+            <img src="lagbild2.png" class="m2" alt="img2" />
+            <img src="förstaloggan.png" class="m3" alt="img3" />
+            <img src="Märke.jpg" class="m4" alt="img4" />
+            <img src="resultat 1.png" class="m5" alt="img5" />
+            <img src="resultat2.png" class="m6" alt="img6" />
+          </div>
+        </div>
+      </div>
+    </main>
     <footer>
-      <nav></nav>
+      <h3>
+        <a href="https://www.tiktok.com/@ormsta_bk?lang=sv-SE"
+          ><i class="fab fa-tiktok"></i> TIK TOK @ormsta_bk</a
+        >
+      </h3>
+      <h4>
+        <a href="https://www.instagram.com/ormsta_bk/"
+          ><i class="fab fa-instagram"></i> INSTAGRAM @ormsta_bk</a
+        >
+      </h4>
+      <h5>
+        © 2022 ORMSTA BK. All rights reserved. No part of this site may be
+        reproduced without our written permission.
+      </h5>
     </footer>
   </body>
 </html>
