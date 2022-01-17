@@ -1,16 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&display=swap");
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Barlow", sans-serif;
 }
-header {
-  border-style: solid;
-}
+
 header div {
-  padding-bottom: 40px;
-  font-size: 2rem;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 800;
+  font-size: 35px;
+  justify-content: center;
 }
 .logo {
   height: 80px;
@@ -21,11 +25,12 @@ header nav {
   padding-bottom: 10px;
   padding-left: 20px;
   background-color: black;
+  font-size: 25px;
 }
 header nav ul {
   margin-left: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   list-style: none;
 }
 
@@ -35,26 +40,189 @@ header nav ul a {
 }
 header nav ul li a:hover {
   color: grey;
+  font-size: 30px;
+  transition: 2.5s;
 }
-#slider {
+.imagenav {
+  display: flex;
+  justify-content: center;
+  background-image: url(gräs.jpg);
+  width: 100%;
+  height: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.slider {
+  width: 75%;
   overflow: hidden;
+  border-style: solid;
+  border-radius: 25px;
 }
-#slider figure {
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  animation: 20s slider infinite;
+
+.images {
+  display: flex;
+  width: 100%;
 }
-#slider figure img {
-  float: left;
-  width: 20%;
+
+.images img {
+  min-width: 100%;
+  transition: all 0.15s ease-in-out;
+  max-height: 1000px;
 }
-@keyframes slider {
-  0% {
-    left: 0;
-  }
-  20% {
-    left: 0;
+.images input {
+  display: none;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+.dots label {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: outset rgb(255, 255, 255) 3px;
+  cursor: pointer;
+  transition: 1s ease;
+  margin: 10px;
+}
+.dots label:hover {
+  background: #fff;
+}
+#img1:checked ~ .m1 {
+  margin-left: 0;
+}
+#img2:checked ~ .m2 {
+  margin-left: -100%;
+}
+#img3:checked ~ .m3 {
+  margin-left: -200%;
+}
+#img4:checked ~ .m4 {
+  margin-left: -300%;
+}
+#img5:checked ~ .m5 {
+  margin-left: -400%;
+}
+#img6:checked ~ .m6 {
+  margin-left: -500%;
+}
+
+footer {
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  display: flex;
+
+  justify-content: right;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+.resultat img {
+  width: 50%;
+  height: 50%;
+}
+.resultat {
+  background-image: url(gräs.jpg);
+}
+.container {
+  width: 100%;
+  background-color: rgb(56, 56, 65);
+  font-size: 3%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  color: white;
+  max-block-size: 55px;
+  height: 10%;
+}
+#demo.collapse.in {
+  height: 100px;
+  font-size: 11px;
+  text-align: start;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+}
+h3 {
+  display: flex;
+  justify-content: right;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  font-weight: 800;
+}
+h4 {
+  display: flex;
+  justify-content: right;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  font-weight: 800;
+}
+h5 {
+  display: flex;
+  justify-content: right;
+  padding-bottom: 10px;
+}
+.truppinnehåll {
+  background-image: url(gräs.jpg);
+}
+div.spelartavla {
+  width: 500px;
+  margin-left: 50px;
+}
+.spelartavla {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  font-size: 20px;
+}
+h6 {
+  font-size: 30px;
+  background: linear-gradient(135deg, #50505055 25%, transparent 25%) -10px 0/
+      20px 20px,
+    linear-gradient(225deg, #ffffff 25%, transparent 25%) -10px 0/ 20px 20px,
+    linear-gradient(315deg, #7c777755 25%, transparent 25%) 0px 0/ 20px 20px,
+    linear-gradient(45deg, #d0d6d2 25%, #e5e5f7 25%) 0px 0/ 20px 20px;
+  text-align: center;
+}
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #303531;
+}
+
+.form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+@media screen and (max-width: 600px) {
+  nav ul li {
+    font-size: 17px;
   }
 }
